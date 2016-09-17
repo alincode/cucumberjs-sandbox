@@ -8,7 +8,8 @@
     "report:createJson": "cucumberjs -f json:cucumber_report.json",
     "report:createHtml": "node reporter",
     "report:open": "open reports/report.html",
-    "report": "npm run report:createJson && npm run report:createHtml && npm run report:open"
+    "report": "npm run report:createJson && npm run report:createHtml && npm run report:open",
+    "coverage": "istanbul cover cucumberjs"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "cucumber-html-report": "^0.4.4"
+    "cucumber-html-report": "^0.4.4",
+    "istanbul": "^0.4.5"
   }
 }
