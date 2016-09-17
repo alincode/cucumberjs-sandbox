@@ -47,9 +47,22 @@ or
 
 `cucumberjs -f json:cucumber_report.json`
 
+or
+
+`npm run report:createJson`
+
 **convert json to html report**
 
 `node reporter`
 
+or
+
+`npm run report:createHtml`
+
+**quickly start**
+
+`npm run report`
+
+### reference
 
 * [cucumber-html-report](https://www.npmjs.com/package/cucumber-html-report)
