@@ -1,22 +1,22 @@
+var chai = require('chai');
+chai.should();
+
 module.exports = function() {
 
-  this.Given(/^height is "([^"]*)"$/, function(arg1, callback) {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
+  this.Given(/^height is "([^"]*)"$/, function(height) {
+    this.height = +height;
   });
 
-  this.Given(/^weight is "([^"]*)"$/, function(arg1, callback) {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
+  this.Given(/^weight is "([^"]*)"$/, function(weight) {
+    this.weight = +weight;
   });
 
-  this.When(/^calculator add two number$/, function(callback) {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
+  this.When(/^calculator add two number$/, function() {
+    this.result = this.weight / (this.height * this.height)
   });
 
-  this.Then(/^result should be "([^"]*)"$/, function(arg1, callback) {
-    // Write code here that turns the phrase above into concrete actions
-    callback(null, 'pending');
+  this.Then(/^result should be "([^"]*)"$/, function(result) {
+    this.result.toFixed(1).should.be.equal(result);
   });
+
 };
