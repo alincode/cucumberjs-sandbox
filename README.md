@@ -66,3 +66,11 @@ or
 ### reference
 
 * [cucumber-html-report](https://www.npmjs.com/package/cucumber-html-report)
+
+## coverage
+
+`istanbul cover cucumberjs`
+
+or
+
+`npm run coverage`
