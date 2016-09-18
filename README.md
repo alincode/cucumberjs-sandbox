@@ -69,6 +69,12 @@ or
 
 ## coverage
 
+**install istanbul module**
+
+`npm i istanbul -S`
+
+**execute**
+
 `istanbul cover cucumberjs`
 
 or
