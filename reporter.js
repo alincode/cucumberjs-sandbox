@@ -1,13 +1,19 @@
-var Report = require('cucumber-html-report');
+var reporter = require('cucumber-html-reporter');
 
 var options = {
-  source: './cucumber_report.json', // source json
-  dest: './reports', // target directory (will create if not exists)
-  name: 'report.html', // report file name (will be index.html if not exists)
-  // template: 'mytemplate.html', // your custom mustache template (uses default if not specified)
-  title: 'Cucumber Report', // Title for default template. (default is Cucumber Report)
-  component: 'My Component', // Subtitle for default template. (default is empty)
-};
+        theme: 'bootstrap',
+        jsonFile: 'cucumber_report.json',
+        output: 'reports/report.html',
+        reportSuiteAsScenarios: true,
+        launchReport: true,
+        metadata: {
+            "App Version":"0.3.2",
+            "Test Environment": "STAGING",
+            "Browser": "Chrome  54.0.2840.98",
+            "Platform": "Windows 10",
+            "Parallel": "Scenarios",
+            "Executed": "Remote"
+        }
+    };
 
-var report = new Report(options);
-report.createReport();
+    reporter.generate(options);

@@ -37,7 +37,7 @@ or
 
 **install cucumber-html-report module**
 
-`npm i cucumber-html-report -S`
+`npm i cucumber-html-reporter -D`
 
 **setting up cucumber-html-report config**
 
@@ -71,7 +71,7 @@ or
 
 **install istanbul module**
 
-`npm i istanbul -S`
+`npm i istanbul -D`
 
 **execute**
 
